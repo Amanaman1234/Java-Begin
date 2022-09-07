@@ -1,9 +1,9 @@
 size(500,500);
 background(255,255,255);
 fill(0,0,0);
-ellipse(175,175,100,100); // links oor
+arc(175,175,100,100,0,2*PI); // links oor
 fill(0,0,0);
-ellipse(325,175,100,100);//rechts oor
+arc(325,175,100,100,0,2*PI);//rechts oor
 fill(201,227,165);
 ellipse(250,250,200,200); //hoofd
 fill(255,255,255);
@@ -14,7 +14,10 @@ fill(255,255,255);
 ellipse(280,220,25,50); //recht oog
 fill(0,0,0);
 ellipse(280,225,18,24);
-
+fill(255, 255, 255);
+noFill();
 arc(250,275,100,100,0,PI); //mond
+
+
 fill(0,0,0);
 ellipse(250,260,35,25); // neusje
