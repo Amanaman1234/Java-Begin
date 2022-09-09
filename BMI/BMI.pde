@@ -24,7 +24,6 @@ text("leeftijd " + leeftijd + " jaar",150,610);
 textSize(30);
 fill(144, 238, 144);
 text("bmi " + bmi , 550, 310);
-bmi = 40;
 if(bmi < 18.5){
   fill(0, 255, 255);
   text("skinny mf" ,545, 360);
