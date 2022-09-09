@@ -24,19 +24,22 @@ text("leeftijd " + leeftijd + " jaar",150,610);
 textSize(30);
 fill(144, 238, 144);
 text("bmi " + bmi , 550, 310);
-bmi = 25;
+bmi = 40;
 if(bmi < 18.5){
   fill(0, 255, 255);
   text("skinny mf" ,545, 360);
 }else if (bmi <24.9){
   fill(144, 238, 144);
-   text("Jij bent gezond:)", 520, 360);
+   text("Jij bent gezond:)", 500, 360);
 }else if(bmi < 29.9){
-  fill(255, 165, 0);
-   text("overgewicht", 520, 400);
+  fill(230, 149, 0);
+   text("overgewicht", 520, 360);
 }else if(bmi <34.9){
-   text("Obesitas", 550, 400);
+  fill(230, 149, 0);
+   text("Obesitas", 550, 360);
 }else if (bmi >= 35){
-  text("jij kan elk moment doodgaan aan hartaanval" ,500, 400);
+  textSize(20);
+  fill(255,0,0);
+  text("jij kan elk moment doodgaan aan hartaanval" ,400, 450);
 }
   
