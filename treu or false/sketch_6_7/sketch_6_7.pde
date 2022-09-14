@@ -11,7 +11,7 @@ if(cijfer >= 5.5){
   diploma = true;
 }else if (cumlaude > 8){
   diploma = true;
-}else if ( jo && mama > 6){
+}else if ( jo <10 && mama > 6){
   diploma = true;
 }
 
