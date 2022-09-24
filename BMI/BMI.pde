@@ -1,6 +1,6 @@
-float  lengte =  176;
-float  gewicht = 55;
-int leeftijd = 15;
+float  lengte =  186;
+float  gewicht = 65;
+int leeftijd = 16;
 float bmi = 0;
 
 size(800,800);
