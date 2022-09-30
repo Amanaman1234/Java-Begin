@@ -1,32 +1,37 @@
-int second = 0;
+int seconden;
 boolean start = false;
+boolean  starter;
 
-
-void setup() {
-  size(500, 500);
+void setup(){
+  size(500,500);
 }
 
-void draw() {
-  background(255, 255, 255);
-  noFill();
-  ellipse(250, 250, 350, 250);
-  if (start == true) {
-    second = millis()/1000;
-    fill(255, 0, 0);
-    textSize(30);
-    text(second, 250, 250);
-  }
-}
-
-void keyReleased() {
-  if (keyCode == 32) {
-    start = true;
-  } else {
-    if (keyCode == 10) {
-      start = false;
-      if (start == false) {
-        second = millis()*1000;
-      }
+void draw(){
+  background(0);
+  if(start){
+    if (int(millis()/1000) % 60 != seconden){
+      seconden++;
+      
     }
+    if(seconden >= 60){
+      seconden -= 60;
+    
+    }
+    if(keyCode == 32){
+
+    }
+    
   }
+  fill(255,255,255);
+  text(seconden,250,250);
+}
+
+void mouseClicked(){
+    if(start == false){
+      starter = true;
+    }
+    if(start == true){
+      noLoop();
+    }
+  start = starter;
 }
