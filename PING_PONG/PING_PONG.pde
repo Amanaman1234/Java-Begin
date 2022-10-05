@@ -1,7 +1,8 @@
-int player1 = 225;
-int player2 = 225;
-int ball = 500;
-int ballsp = 5;
+int player1y = 255,player2y = 225;
+int ballx = 500,bally = 250;
+int ballspx = 10,ballspy = 2;
+int score1 = 0, score2 = 0;
+
 
 void setup(){
   size(1000,600);
@@ -10,27 +11,73 @@ void setup(){
 void draw(){
   background(0);
   
-  rect(0,player1,25,125);
-  rect(975,player2,25,125);
-  ellipse(ball,height/2,50,50);
-  ball = ball + ballsp;
+  rect(25,player1y,25,125);
+  rect(950,player2y,25,125);
+  ellipse(ballx,bally,50,50);
+  textSize(100);
+  text(score1,250,150);
+  text(score2,700,150);
+  bally = bally + ballspy;
+  ballx = ballx + ballspx;
   
   if(keyCode == 87){
-    player1 -= 10;
-  }
-    if( keyCode == 83){
-    player1 += 10;
-  }
-    if(keyCode == 38){
-    player2 -= 10;
-  }
-    if( keyCode == 40){
-    player2 += 10;
-  }
-  if(ball >= width || ball <= 0){
-    ballsp = ballsp * -1;
-    
+    player1y -= 10;
   }
 
+    if( keyCode == 83){
+    player1y += 10;
+  }
+    if(keyCode == 38){
+    player2y -= 10;
+  }
+    if( keyCode == 40){
+    player2y += 10;
+  }
+  if(ballx >= width || ballx <= 0){
+    ballspx = ballspx * -1;
+    }
+  if(bally >= height || bally <= 0){
+    ballspy = ballspy * -1;
+    }
   
+  if(player1y >= 475){
+    player1y -= 10;
+     }
+   
+  if(player1y <= 0){
+    player1y += 10;
+    }
+    
+  if(player2y >= 475){
+    player2y -= 10;
+    }
+   
+  if(player2y <= 0){
+    player2y += 10;
+     }
+     
+  if(ballx >= width){
+    score1++;
+    ballx = 500;
+    bally=300;
+     }
+   if(ballx <= 0){
+       score2++;
+       ballx = 500;
+       bally = 300;
+     }
+     if(bally > player1y && bally < player1y+125){
+
+       if(ballx > 25  && ballx < 50 ){
+                ballspx = ballspx *-1;
+       }
+       
+     }
+          if(bally > player2y && bally < player2y+125){
+
+       if(ballx > 950  && ballx < 975 ){
+                ballspx = ballspx *-1;
+       }
+       
+     }
 }
